@@ -1,0 +1,21 @@
+### Odata lack information about the error
+POST https://localhost:7017/odata/Customers
+accept: */*
+Content-Type: application/json
+
+{
+  "id": 0,
+  "name": "string",
+  "age": "12q3"
+}
+
+### Regular WebApi returns the error details
+POST https://localhost:7017/api/NonOdataCustomers
+accept: */*
+Content-Type: application/json
+
+{
+  "id": 0,
+  "name": "string",
+  "age": "12q3"
+}
